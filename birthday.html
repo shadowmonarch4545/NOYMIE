@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A Special Message For You ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="birthday.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         INTRO
+    ================================= -->
+
+    <section
+        id="intro"
+        class="birthday-section active"
+    >
+
+        <div class="intro-content">
+
+            <div class="small-cross">
+                ✝
+            </div>
+
+            <p class="small-text">
+                ASSESSMENT COMPLETE
+            </p>
+
+            <h1>
+                There is one final message...
+            </h1>
+
+            <p class="intro-line">
+                And this one isn't from a patient.
+            </p>
+
+            <button
+                onclick="beginBirthday()"
+            >
+                OPEN YOUR MESSAGE ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         BIRTHDAY REVEAL
+    ================================= -->
+
+    <section
+        id="reveal"
+        class="birthday-section"
+    >
+
+        <div
+            id="stars"
+            class="stars"
+        ></div>
+
+
+        <div class="reveal-content">
+
+            <div class="gold-cross">
+                ✝
+            </div>
+
+            <p class="blessing">
+                GOD'S GREATEST BLESSINGS
+            </p>
+
+            <h1 class="happy">
+                HAPPY
+            </h1>
+
+            <h1 class="birthday">
+                BIRTHDAY
+            </h1>
+
+            <h2>
+                Noymie Grace C. Balopeños ❤️
+            </h2>
+
+            <div class="gold-line"></div>
+
+            <p class="scripture">
+
+                “For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future.”
+
+            </p>
+
+            <p class="verse">
+                Jeremiah 29:11
+            </p>
+
+            <button
+                onclick="showLetter()"
+            >
+                CONTINUE ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         LETTER
+    ================================= -->
+
+    <section
+        id="letter"
+        class="birthday-section"
+    >
+
+        <div class="letter-container">
+
+            <div class="letter-top">
+
+                <span>✝</span>
+
+                <p>
+                    A LETTER FROM THE SPECIAL PEOPLE FROM YOUR HEART
+                </p>
+
+            </div>
+
+
+            <div class="letter">
+
+                <h1>
+                    Dear Noymie Grace,
+                </h1>
+
+
+                <p>
+                    If you've made it this far,
+                    congratulations. 😂
+                    ka chamba pa uroy
+                </p>
+
+
+                <p>
+                    You survived the assessment,
+                    answered the questions,
+                    and even completed the procedure.
+                </p>
+                <p>
+                    Chat gpt ramani nako haha way hilakay ahh hahaha 
+                </p>
+
+
+                <p>
+                    But honestly, all those little
+                    challenges were just my way of
+                    leading you to this moment.
+                </p>
+
+
+                <p class="highlight">
+                    Today, I don't want to talk about
+                    you as a nurse.
+                </p>
+
+
+                <p>
+                    I want to talk about you as my sister.
+                </p>
+
+
+                <p>
+                    I'm thankful to God for giving me
+                    someone like you.
+                </p>
+
+
+                <p>
+                    You spend so much of your life
+                    caring for other people, helping
+                    others, and giving your best.
+                </p>
+
+
+                <p>
+                    I hope you know that your efforts
+                    don't go unnoticed.
+                </p>
+
+
+                <p class="highlight">
+                    And today, I hope you allow yourself
+                    to stop for a moment, smile, and
+                    remember that you are loved too.
+                </p>
+
+
+                <p>
+                    May God continue to guide your steps,
+                    protect you wherever you go, give you
+                    strength when you feel tired, and
+                    bless the work of your hands.
+                </p>
+
+
+                <p>
+                    May He continue to use your life
+                    to touch the lives of the people
+                    you care for.
+                </p>
+
+
+                <p>
+                    Happy Birthday, Te.
+                </p>
+
+
+                <p>
+                    I love you, and I'm always grateful
+                    that God made you my sister.
+                </p>
+
+
+                <div class="signature">
+
+                    <p>
+                        With love,
+                    </p>
+
+                    <strong>
+                        The Shdaow Monarch Your Brother ❤️
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                onclick="showVoice()"
+            >
+                THERE'S SOMETHING I WANT YOU TO HEAR 🎙️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         VOICE MESSAGE
+    ================================= -->
+
+    <section
+        id="voice"
+        class="birthday-section"
+    >
+
+        <div class="voice-container">
+
+            <div class="voice-icon">
+                🎙️
+            </div>
+
+            <p class="small-text">
+                A MESSAGE FROM THE HEART
+            </p>
+
+            <h1>
+                Some things are better heard than written.
+            </h1>
+
+            <p>
+                I recorded something special for you.
+            </p>
+
+
+            <div class="audio-box">
+
+                <div
+                    id="soundWave"
+                    class="sound-wave"
+                >
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <audio
+                    id="voiceMessage"
+                    controls
+                >
+
+                    <source
+                        src="assets/voice-message.mp3"
+                        type="audio/mpeg"
+                    >
+
+                    Your browser does not support audio.
+
+                </audio>
+
+            </div>
+
+
+            <button
+                onclick="showMemories()"
+            >
+                CONTINUE TO OUR MEMORIES 📸
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         MEMORIES
+    ================================= -->
+
+    <section
+        id="memories"
+        class="birthday-section"
+    >
+
+        <div class="memories-container">
+
+            <p class="small-text">
+                LITTLE MOMENTS
+            </p>
+
+            <h1>
+                Our Memories ❤️
+            </h1>
+
+            <p>
+                Some moments become memories,
+                but the people we love remain
+                special forever.
+            </p>
+
+
+            <div class="photo-frame">
+
+                <img
+                    id="memoryImage"
+                    src="assets/sister-photo.jpg"
+                    alt="A beautiful memory"
+                >
+
+            </div>
+
+
+            <div class="photo-controls">
+
+                <button
+                    onclick="previousPhoto()"
+                >
+                    ←
+                </button>
+
+                <span id="photoNumber">
+                    1 / 3
+                </span>
+
+                <button
+                    onclick="nextPhoto()"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+            <button
+                onclick="showFinal()"
+            >
+                ONE LAST THING ❤️
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         FINAL MESSAGE
+    ================================= -->
+
+    <section
+        id="final"
+        class="birthday-section final-section"
+    >
+
+        <div class="final-content">
+
+            <div class="final-cross">
+                ✝
+            </div>
+
+
+            <p class="small-text">
+                BEFORE YOU GO...
+            </p>
+
+
+            <h1>
+                One last thing,
+                <br>
+                Te.
+            </h1>
+
+
+            <div class="final-line"></div>
+
+
+            <p class="final-message">
+
+                No matter where life takes you,
+                always remember that you are
+                deeply loved.
+
+            </p>
+
+
+            <p class="final-message">
+
+                Keep trusting God's timing.
+                Keep walking in faith.
+                Keep serving Him with the gifts
+                He has given you.
+
+            </p>
+
+
+            <p class="final-message">
+
+                Your journey is still being written,
+                and I believe God has beautiful
+                things prepared for your life.
+
+            </p>
+
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+
+            <h2>
+                HAPPY BIRTHDAY, TE!
+            </h2>
+
+
+            <p>
+                May God bless you today,
+                tomorrow, and always.
+            </p>
+
+
+            <p class="signature-final">
+                — GBBOY 
+            </p>
+
+
+            <div class="amen">
+                AMEN ✝
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="birthday.js"></script>
+
+</body>
+
+</html>

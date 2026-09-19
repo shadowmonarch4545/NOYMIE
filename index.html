@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nurse's Assessment</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         INTRO SCREEN
+    ========================================== -->
+
+    <section
+        id="startScreen"
+        class="screen active"
+    >
+
+        <div class="card intro-card">
+
+            <div class="hospital-icon">
+                🏥
+            </div>
+
+            <p class="small-label">
+                SECURE MEDICAL ASSESSMENT
+            </p>
+
+            <h1>
+                NURSE'S
+                <br>
+                NOYMIE
+                </br>
+                ASSESSMENT
+            </h1>
+
+            <div class="divider"></div>
+
+            <p class="welcome">
+                Welcome, Nurse.
+            </p>
+
+            <p class="description">
+                Before ni nimo ma abli ang
+                special message, you must first
+                complete a short assessment.
+            </p>
+
+            <p class="warning">
+                ⚠️ AUTHORIZED NURSE ONLY
+            </p>
+
+            <button
+                id="beginButton"
+                class="main-button"
+                onclick="startAssessment()"
+            >
+                BEGIN ASSESSMENT
+                <span>🩺</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         QUIZ SCREEN
+    ========================================== -->
+
+    <section
+        id="quizScreen"
+        class="screen"
+    >
+
+        <div class="card quiz-card">
+
+            <p class="small-label">
+                NURSING KNOWLEDGE CHECK
+            </p>
+
+            <div class="quiz-progress">
+
+                QUESTION
+
+                <span id="questionNumber">
+                    1
+                </span>
+
+                /
+
+                <span id="totalQuestions">
+                    3
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+
+            <h2 id="question">
+                Loading question...
+            </h2>
+
+
+            <div id="answers">
+                <!-- Answers created by JavaScript -->
+            </div>
+
+
+            <p
+                id="quizResult"
+                class="result"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         NEEDLE GAME
+    ========================================== -->
+
+    <section
+        id="needleScreen"
+        class="screen"
+    >
+
+        <div class="card needle-card">
+
+            <p class="small-label">
+                FINAL PROCEDURE
+            </p>
+
+            <h2>
+                💉 Injection Site
+            </h2>
+
+            <p class="description">
+                Excellent work, Nurse.
+            </p>
+
+            <p class="description">
+                One final procedure is required
+                before the assessment is complete.
+            </p>
+
+
+            <!-- GAME AREA -->
+
+            <div
+                id="injectionArea"
+                class="injection-area"
+            >
+
+                <!-- Arm -->
+
+                <div id="arm">
+
+                    <div class="arm-highlight"></div>
+
+                    <!-- Target -->
+
+                    <div
+                        id="target"
+                        aria-label="Injection target"
+                    >
+                        🎯
+                    </div>
+
+                </div>
+
+
+                <!-- Draggable Needle -->
+
+                <div
+                    id="needle"
+                    role="button"
+                    aria-label="Drag the needle"
+                >
+                    💉
+                </div>
+
+            </div>
+
+
+            <p class="instruction">
+                👆 Touch and drag the needle
+                to the target.
+            </p>
+
+
+            <p
+                id="needleResult"
+                class="result"
+            ></p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

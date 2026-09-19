@@ -1,0 +1,1087 @@
+/* =========================================
+   NURSE BIRTHDAY EXPERIENCE
+   RESPONSIVE MAIN PAGE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+    --cream: #f7f4ea;
+    --paper: #fffdf8;
+
+    --sage: #7c8d78;
+    --sage-dark: #536450;
+
+    --gold: #b99a5b;
+    --gold-light: #d7c18e;
+
+    --brown: #5b4a3a;
+    --dark: #302c27;
+
+    --soft-green: #e8eee5;
+}
+
+
+/* =========================================
+   BASE
+========================================= */
+
+html {
+    width: 100%;
+    min-height: 100%;
+
+    scroll-behavior: smooth;
+
+    -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow-x: hidden;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fffdf8 0%,
+            #f7f4ea 65%,
+            #eee9db 100%
+        );
+
+    color: var(--dark);
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================
+   SCREEN SYSTEM
+========================================= */
+
+.screen {
+
+    display: none;
+
+    width: 100%;
+
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding:
+        clamp(16px, 4vw, 40px);
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.screen.active {
+
+    display: flex;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    width: min(
+        100%,
+        700px
+    );
+
+    padding:
+        clamp(28px, 6vw, 50px)
+        clamp(20px, 6vw, 45px);
+
+    text-align: center;
+
+    background:
+        rgba(255, 253, 248, .97);
+
+    border:
+        1px solid
+        rgba(185, 154, 91, .25);
+
+    border-radius:
+        clamp(16px, 4vw, 26px);
+
+    box-shadow:
+        0 20px 60px
+        rgba(75, 65, 50, .12);
+
+    animation:
+        cardAppear .7s ease;
+
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.hospital-icon {
+
+    font-size:
+        clamp(42px, 12vw, 64px);
+
+    line-height: 1;
+
+    margin-bottom:
+        clamp(14px, 4vw, 22px);
+
+    animation:
+        gentleFloat 3s ease-in-out infinite;
+
+}
+
+
+.small-label {
+
+    margin-bottom:
+        clamp(15px, 4vw, 24px);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(9px, 2.5vw, 12px);
+
+    font-weight: bold;
+
+    letter-spacing:
+        clamp(2px, 1vw, 4px);
+
+    color:
+        var(--sage-dark);
+
+}
+
+
+.card h1 {
+
+    color:
+        var(--brown);
+
+    font-size:
+        clamp(
+            38px,
+            10vw,
+            76px
+        );
+
+    line-height:
+        .95;
+
+    font-weight:
+        normal;
+
+    letter-spacing:
+        clamp(
+            -1.5px,
+            -.2vw,
+            0
+        );
+
+}
+
+
+.divider {
+
+    width:
+        clamp(50px, 15vw, 75px);
+
+    height:
+        2px;
+
+    margin:
+        clamp(20px, 5vw, 30px)
+        auto;
+
+    background:
+        var(--gold);
+
+}
+
+
+.welcome {
+
+    margin-bottom:
+        12px;
+
+    font-size:
+        clamp(
+            18px,
+            4.5vw,
+            23px
+        );
+
+    color:
+        var(--brown);
+
+}
+
+
+.description {
+
+    width: 100%;
+
+    max-width:
+        540px;
+
+    margin:
+        0 auto 15px;
+
+    font-size:
+        clamp(
+            14px,
+            3.8vw,
+            18px
+        );
+
+    line-height:
+        1.65;
+
+    color:
+        #62584e;
+
+}
+
+
+.warning {
+
+    margin-top:
+        22px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            10px,
+            3vw,
+            12px
+        );
+
+    letter-spacing:
+        clamp(
+            .5px,
+            .5vw,
+            1.5px
+        );
+
+    color:
+        var(--gold);
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+}
+
+
+.main-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        8px;
+
+    min-height:
+        48px;
+
+    width:
+        min(
+            100%,
+            300px
+        );
+
+    margin-top:
+        24px;
+
+    padding:
+        14px 24px;
+
+    border:
+        none;
+
+    border-radius:
+        40px;
+
+    background:
+        var(--sage-dark);
+
+    color:
+        white;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            11px,
+            3vw,
+            14px
+        );
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        1px;
+
+    cursor:
+        pointer;
+
+    touch-action:
+        manipulation;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+}
+
+
+.main-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(83, 100, 80, .25);
+
+}
+
+
+.main-button:active {
+
+    transform:
+        scale(.97);
+
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+#quizScreen {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7f4ea,
+            #e9eee6
+        );
+
+}
+
+
+.quiz-progress {
+
+    margin-bottom:
+        12px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            10px,
+            2.8vw,
+            12px
+        );
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        2px;
+
+    color:
+        var(--sage-dark);
+
+}
+
+
+.progress-bar {
+
+    width:
+        100%;
+
+    height:
+        5px;
+
+    margin-bottom:
+        clamp(
+            25px,
+            6vw,
+            38px
+        );
+
+    border-radius:
+        10px;
+
+    background:
+        #e3dfd4;
+
+    overflow:
+        hidden;
+
+}
+
+
+.progress-fill {
+
+    width:
+        33.33%;
+
+    height:
+        100%;
+
+    background:
+        var(--gold);
+
+    transition:
+        width .4s ease;
+
+}
+
+
+.card h2 {
+
+    margin-bottom:
+        clamp(
+            20px,
+            5vw,
+            28px
+        );
+
+    color:
+        var(--brown);
+
+    font-size:
+        clamp(
+            25px,
+            7vw,
+            45px
+        );
+
+    line-height:
+        1.2;
+
+    font-weight:
+        normal;
+
+}
+
+
+#answers {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    width:
+        100%;
+
+}
+
+
+.answer {
+
+    width:
+        100%;
+
+    min-height:
+        50px;
+
+    padding:
+        14px 17px;
+
+    margin:
+        0;
+
+    border:
+        1px solid
+        rgba(83, 100, 80, .25);
+
+    border-radius:
+        14px;
+
+    background:
+        #f8f6ef;
+
+    color:
+        var(--brown);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(
+            14px,
+            3.8vw,
+            17px
+        );
+
+    line-height:
+        1.35;
+
+    text-align:
+        left;
+
+    cursor:
+        pointer;
+
+    touch-action:
+        manipulation;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+}
+
+
+.answer:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--soft-green);
+
+}
+
+
+.answer:active {
+
+    transform:
+        scale(.985);
+
+}
+
+
+.answer:disabled {
+
+    cursor:
+        default;
+
+    opacity:
+        .65;
+
+}
+
+
+.result {
+
+    min-height:
+        25px;
+
+    margin-top:
+        18px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            12px,
+            3.2vw,
+            14px
+        );
+
+    font-weight:
+        bold;
+
+}
+
+
+/* =========================================
+   NEEDLE GAME
+========================================= */
+
+#needleScreen {
+
+    background:
+        radial-gradient(
+            circle,
+            #fffdf8,
+            #f2eee3
+        );
+
+}
+
+
+.injection-area {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    /*
+       Keeps the game proportional
+       on different screen sizes.
+    */
+
+    aspect-ratio:
+        16 / 9;
+
+    min-height:
+        220px;
+
+    max-height:
+        320px;
+
+    margin:
+        28px auto 18px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        clamp(
+            16px,
+            4vw,
+            25px
+        );
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d9cc,
+            #e5b395
+        );
+
+    box-shadow:
+        inset 0 0 35px
+        rgba(100, 70, 50, .08);
+
+    touch-action:
+        none;
+
+}
+
+
+/* =========================================
+   ARM
+========================================= */
+
+#arm {
+
+    position:
+        absolute;
+
+    width:
+        78%;
+
+    height:
+        35%;
+
+    left:
+        11%;
+
+    top:
+        32.5%;
+
+    border-radius:
+        70px;
+
+    background:
+        #e3b092;
+
+    box-shadow:
+        inset 0 -7px 15px
+        rgba(120, 70, 50, .08);
+
+}
+
+
+/* =========================================
+   ARM HIGHLIGHT
+========================================= */
+
+.arm-highlight {
+
+    position:
+        absolute;
+
+    width:
+        65%;
+
+    height:
+        12px;
+
+    top:
+        20px;
+
+    left:
+        17%;
+
+    border-radius:
+        20px;
+
+    background:
+        rgba(255, 255, 255, .18);
+
+}
+
+
+/* =========================================
+   TARGET
+========================================= */
+
+#target {
+
+    position:
+        absolute;
+
+    right:
+        6%;
+
+    top:
+        20%;
+
+    font-size:
+        clamp(
+            36px,
+            10vw,
+            50px
+        );
+
+    line-height:
+        1;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+/* =========================================
+   NEEDLE
+========================================= */
+
+#needle {
+
+    position:
+        absolute;
+
+    left:
+        5%;
+
+    top:
+        40%;
+
+    z-index:
+        20;
+
+    font-size:
+        clamp(
+            36px,
+            10vw,
+            50px
+        );
+
+    line-height:
+        1;
+
+    cursor:
+        grab;
+
+    user-select:
+        none;
+
+    -webkit-user-select:
+        none;
+
+    -webkit-touch-callout:
+        none;
+
+    touch-action:
+        none;
+
+}
+
+
+#needle:active {
+
+    cursor:
+        grabbing;
+
+    transform:
+        scale(1.1);
+
+}
+
+
+.instruction {
+
+    margin-top:
+        5px;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(
+            11px,
+            3.2vw,
+            14px
+        );
+
+    line-height:
+        1.5;
+
+    color:
+        var(--sage-dark);
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity:
+            0;
+
+        transform:
+            translateY(25px)
+            scale(.98);
+
+    }
+
+    to {
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+@keyframes gentleFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px);
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+    .screen {
+
+        padding:
+            12px 8px;
+
+    }
+
+
+    .card {
+
+        padding:
+            25px 16px;
+
+        border-radius:
+            16px;
+
+    }
+
+
+    .card h1 {
+
+        font-size:
+            37px;
+
+    }
+
+
+    .description {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.55;
+
+    }
+
+
+    .main-button {
+
+        width:
+            100%;
+
+        min-height:
+            50px;
+
+    }
+
+
+    .answer {
+
+        padding:
+            13px 14px;
+
+        min-height:
+            48px;
+
+    }
+
+
+    .injection-area {
+
+        min-height:
+            210px;
+
+    }
+
+}
+
+
+/* =========================================
+   VERY SHORT PHONE SCREENS
+========================================= */
+
+@media (max-height: 650px) {
+
+    .screen {
+
+        align-items:
+            flex-start;
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+
+    }
+
+
+    .card {
+
+        padding:
+            25px 20px;
+
+    }
+
+
+    .hospital-icon {
+
+        font-size:
+            42px;
+
+        margin-bottom:
+            12px;
+
+    }
+
+
+    .small-label {
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .divider {
+
+        margin:
+            16px auto;
+
+    }
+
+
+    .main-button {
+
+        margin-top:
+            16px;
+
+    }
+
+}
